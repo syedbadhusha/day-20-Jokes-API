@@ -8,6 +8,11 @@ const row = document.createElement('div')
 row.className='row';
 row.id='mainRow';
 
+const title = document.createElement('h1')
+title.className='title';
+title.id='title'
+title.innerHTML="MARVEL COMIC LIST"
+
 //// Creating col elment for display joke content
 let col = document.createElement('div')
 col.className='col col-md-12'
@@ -31,7 +36,6 @@ async function changeJoke(currEle){
     const fetchAPIread = await fetchAPI.json()  // converting readable stream to json object
     let jokesEle1 =  currEle.parentElement.querySelector('#jokesCntnt1')
     let jokesEle2 =  currEle.parentElement.querySelector('#jokesCntnt2')
-    let jokesType =  currEle.parentElement.querySelector('#type')
     let jokesCat =  currEle.parentElement.querySelector('#category')
     if(fetchAPIread.setup){
         jokesEle1.innerHTML=`Qustion : ${fetchAPIread.setup}`
@@ -41,8 +45,9 @@ async function changeJoke(currEle){
         jokesEle1.innerHTML=`Joke : ${fetchAPIread.joke}`
         jokesEle2.innerHTML='';
     }
-    jokesCat.innerHTML=`JOKE CATEGORY : ${fetchAPIread.category}`    
-}
+    jokesCat.innerHTML=`JOKE CATEGORY : ${fetchAPIread.category}`
+  }
+
 row.append(col);
 container.append(row);
 document.body.append(container);

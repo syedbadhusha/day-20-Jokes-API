@@ -1,0 +1,22 @@
+body{
+    background-color: olivedrab;
+}
+/* aligning all card content center*/ 
+.card{
+    text-align: center;
+}
+ /* changing card header styles */
+.card-header{
+    background-color: brown;
+    color: bisque;
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: center;
+}
+/* style for joke content*/
+.jokesCntnt{
+    font-size: 20px;
+    color: saddlebrown;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
